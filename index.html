@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sudoku Arena</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="topbar">
+      <div class="brand">Sudoku Arena</div>
+      <div class="controls">
+        <select id="difficulty">
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+        <button id="newGameBtn">New Game</button>
+        <button id="googleSignIn">Sign in with Google</button>
+        <div id="userInfo" class="user"></div>
+      </div>
+    </header>
+
+    <section class="game-area">
+      <div id="board" class="board" tabindex="0" aria-label="Sudoku board"></div>
+      <aside class="rightpane">
+        <div class="timer" id="timer">Time: 0s</div>
+        <button id="checkBtn" class="primary">Submit Puzzle</button>
+        <div class="leader">
+          <h3>Leaderboard</h3>
+          <ul id="leaderboard"></ul>
+        </div>
+      </aside>
+    </section>
+
+    <footer class="footer">
+      <div class="theme-note">Dark theme · Neon accents · Immediate mistake highlighting</div>
+    </footer>
+  </main>
+
+  <script src="sudoku.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
